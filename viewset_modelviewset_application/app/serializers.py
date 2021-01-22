@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from .models import one,two
+from .models import *
 
-class OneSerializer(serializers.Modelserializer):
+class OneSerializer(serializers.ModelSerializer):
     class Meta:
         model=one
-        fields=['__all__']
+        fields='__all__'
 
-class TwoSerializer(serializers.Modelserializer):
+class TwoSerializer(serializers.ModelSerializer):
     model=two
-    fields=["__all__"]
+    fields="__all__"

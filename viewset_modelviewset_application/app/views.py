@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import OneSerializer,TwoSerializer
+from .serializers import OneSerializer
+from .serializers import TwoSerializer
 from .models import one,two
 
 
-class OneViewset(viewsets.ModelViewset):
+class OneViewset(viewsets.ModelViewSet):
     queryset=one.objects.all()
-    serializer_class = serializers.OneSerializer
+    serializer_class = OneSerializer
 
-class TwoViewset(viewsets.ModelViewset):
+class TwoViewset(viewsets.ModelViewSet):
     queryset=two.objects.all()
-    serializer_class=serializers.TwoSerializer
+    serializer_class= TwoSerializer
