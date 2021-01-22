@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import *
+from .models import one,two
+# from .models import *
 
 class OneSerializer(serializers.ModelSerializer):
     class Meta:
@@ -7,5 +8,6 @@ class OneSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class TwoSerializer(serializers.ModelSerializer):
-    model=two
-    fields="__all__"
+    class Meta:
+        model=two
+        fields='__all__'

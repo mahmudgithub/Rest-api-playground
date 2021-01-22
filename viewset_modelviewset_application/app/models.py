@@ -10,3 +10,4 @@ class one(models.Model):
 class two(models.Model):
     age=models.IntegerField()
     roll=models.IntegerField()
+    board=models.CharField(max_length=100)
