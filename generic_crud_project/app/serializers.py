@@ -3,7 +3,7 @@ from .models import one,two
 
 class OneSerializer(serializers.ModelSerializer):
     class Meta:
-        models=one
+        model=one
         fields='__all__'
 
 class TwoSerializer(serializers.ModelSerializer):
